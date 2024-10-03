@@ -50,7 +50,8 @@ main() {
   show_synchronize_panes_label=$(get_tmux_option "@kanagawa-synchronize-panes-label" "Sync")
   time_format=$(get_tmux_option "@kanagawa-time-format" "")
   show_ssh_session_port=$(get_tmux_option "@kanagawa-show-ssh-session-port" false)
-  IFS=' ' read -r -a plugins <<<$(get_tmux_option "@kanagawa-plugins" "battery network weather")
+  #IFS=' ' read -r -a plugins <<<$(get_tmux_option "@kanagawa-plugins" "battery network weather")
+  IFS=' ' read -r -a plugins <<<$(get_tmux_option "@kanagawa-plugins" "time")
   show_empty_plugins=$(get_tmux_option "@kanagawa-show-empty-plugins" true)
 
   # Handle left icon configuration
